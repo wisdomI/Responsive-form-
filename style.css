@@ -7,7 +7,7 @@
 }
 
 body {
-    background-image: url(./Images/bg-intro-desktop.png);
+    background-image: url(./bg-intro-desktop.png);
     background-repeat: repeat;
     background-color: rgb(234, 101, 101);
 }
