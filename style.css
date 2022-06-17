@@ -134,7 +134,7 @@ span {
 
 @media (max-width: 375px) {
     body {
-        background-image: url(./Images/bg-intro-mobile.png);
+        background-image: url(./bg-intro-mobile.png);
         background-repeat: repeat;
         background-color: rgb(234, 101, 101);
     }
