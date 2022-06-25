@@ -7,15 +7,16 @@
 }
 
 body {
-    background-image: url(./bg-intro-desktop.png);
+    background-image: url(bg-intro-desktop.png);
     background-repeat: repeat;
     background-color: rgb(234, 101, 101);
+    height: 100vh;
 }
 
 main {
     display: flex;
     justify-content: center;
-    margin-top: 200px;
+    margin-top: 50px;
 }
 
 .text-section {
@@ -80,12 +81,43 @@ input {
     font-weight: bold;
 }
 
+label {
+    padding-left: 5px;
+}
+
 input:focus {
     outline: none;
     border-color: rgb(112, 48, 202) ;
-    box-shadow: 0 0 10px rgb(112, 48, 202);
 }
 
+a {
+    text-decoration: none;
+    font-size: 400;
+    font-weight: 500;
+    color: white;
+}
+
+
+/* ERROR STYLING ______________________________________*/
+.input-container[data-error] .input {
+    border-color: #c92432;
+    color: #c92432;
+    display: block;
+    background-image: url(./Images/icon-error.svg);
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+.input-container[data-error]::after {
+    content: attr(data-error);
+    font-size: 0.7rem;
+    color: #c92432;
+    margin: 0 0 0 370px;
+    text-align: right;
+}
+/* ___________________________________________________ */
+
+/* 
 :root {
     --color-invalid: red;
 }
@@ -100,7 +132,7 @@ input:not(:focus):not(::placeholder-shown):invalid {
 }
 input:not(:focus):not(::placeholder-shown):invalid ~ .error-message{
     display: block;
-}
+} */
 
 
 ::placeholder {
@@ -134,7 +166,7 @@ span {
 
 @media (max-width: 375px) {
     body {
-        background-image: url(./bg-intro-mobile.png);
+        background-image: url(bg-intro-mobile.png);
         background-repeat: repeat;
         background-color: rgb(234, 101, 101);
     }
@@ -194,6 +226,12 @@ span {
     .ending-text {
         font-size: 9px;
         text-align: center;
-        margin: 0 20px;
+        margin: 0 10px;
     }
+
+        /* ERROR STYLING ______________________________________*/
+    .input-container[data-error]::after {
+        margin: 0 0 0 100px;
+    }
+
 }
