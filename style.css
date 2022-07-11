@@ -164,7 +164,7 @@ span {
     color: hsl(0, 100%, 74%);
 }
 
-@media (max-width: 375px) {
+@media (max-width: 475px) {
     body {
         background-image: url(./Images/bg-intro-mobile.png);
         background-repeat: repeat;
